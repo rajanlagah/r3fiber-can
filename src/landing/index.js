@@ -2,6 +2,7 @@
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import React, { useRef } from 'react';
+import { CanModel } from '../components/can';
 
 const Model = () => {
   const { scene } = useGLTF('/model/can3.glb');
@@ -29,7 +30,7 @@ const CanContainer = () => {
     className="canvas" ref={cameraRef}>
       <ambientLight intensity={4} />
       <directionalLight position={[0, 0, 5]} intensity={1.5} />
-      <Model />
+      <CanModel />
       <OrbitControls ref={controlsRef} />
     </Canvas>
   );
